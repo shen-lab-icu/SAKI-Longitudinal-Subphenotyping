@@ -165,17 +165,6 @@ If you use this code in your research, please cite:
 }
 ```
 
-Software citation:
-```bibtex
-@software{saki_phenotyping2025,
-  author={[Your Name]},
-  title={SAKI-Phenotyping: Longitudinal Subphenotype Analysis Pipeline},
-  year={2025},
-  url={https://github.com/shen-lab-icu/SAKI-Longitudinal-Subphenotyping},
-  version={1.0.0}
-}
-```
-
 ## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -191,7 +180,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For questions or issues:
 - Open an issue on GitHub: [Issues](https://github.com/shen-lab-icu/SAKI-Longitudinal-Subphenotyping/issues)
-- Contact: [Your Email]
+- Contact: bioinfo_zhb@163.com
 
 ---
 
