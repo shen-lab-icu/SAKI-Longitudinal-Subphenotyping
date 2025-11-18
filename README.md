@@ -8,7 +8,7 @@
 
 **Title**: Longitudinal subphenotypes in Sepsis-Associated Acute Kidney Injury patients with distinct kidney injury trajectories and diuretic therapy responses
 
-**Authors**: [To be filled]  
+**Authors**: [Li Han, Haibo Zhu, Jun He, Guanghao Liu, Ruoqiong Wu, Hao Fu, Lu Ao, Shixiang Zheng, Zhongheng Zhang, Xiaopei Shen]  
 **Journal**: [To be filled]  
 **DOI**: [To be filled]
 
