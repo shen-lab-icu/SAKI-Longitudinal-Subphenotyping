@@ -1,0 +1,6 @@
+# Example configuration for scripts/plot_time_stats.py
+input_csv: outputs/time_stats.csv
+output_dir: outputs/time_stats_plots
+metrics: [los_saki-sepsis]
+dataset_order: [mimic, aumcdb, eicu]
+group_order: [1, 2, 3]

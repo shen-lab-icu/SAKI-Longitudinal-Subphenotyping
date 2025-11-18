@@ -1,0 +1,27 @@
+# Example configuration consumed by scripts/generate_time_windows.py
+# Update the CSV paths so they point to your processed cohort tables.
+output_csv: outputs/time_windows_24h.csv
+
+datasets:
+  - name: mimic
+    label_csv: ../publication_code/01.MIMICIV_SAKI_trajCluster/df_mixAK_fea4_C3.csv
+    feature_csv: /path/to/mimic/features.csv
+    events_csv: /path/to/mimic/saki_event_time.csv
+    id_column: stay_id
+    label_column: groupHPD
+    charttime_column: charttime
+    onset_column: saki_onset
+    time_unit: datetime
+    window_hours: [-48, 168]
+    bucket_hours: 24
+    aggregation:
+      sum_columns: [urineoutput]
+
+  - name: eicu
+    label_csv: ../publication_code/03.eICU_SAKI_trajCluster/df_mixAK_fea4_C3_eicu.csv
+    feature_csv: /path/to/eicu/features.csv
+    events_csv: /path/to/eicu/saki_event_time.csv
+    time_unit: minutes
+    drop_columns: [platelet]
+    aggregation:
+      sum_columns: [urineoutput]

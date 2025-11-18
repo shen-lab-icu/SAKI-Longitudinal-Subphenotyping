@@ -1,0 +1,24 @@
+# Example configuration for scripts/run_psm.py
+# Propensity score matching with explicit caliper for Methods section
+
+treatment_column: is_diuretic_responsive
+covariates:
+  - creatinine
+  - urineoutput
+  - sofa_norenal
+  - colloid_bolus
+
+# Caliper as fraction of SD of propensity score logit (standard = 0.2)
+caliper: 0.2
+
+# 1:1 matching (set to null for greedy many-to-one)
+match_ratio: 1
+
+# Matching without replacement
+replacement: false
+
+random_state: 42
+strategy: nearest
+
+output_matched_csv: outputs/psm_matched_cohort.csv
+output_report_txt: outputs/psm_diagnostics_report.txt

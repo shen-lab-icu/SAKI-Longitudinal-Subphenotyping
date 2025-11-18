@@ -1,0 +1,40 @@
+# Example heatmap job configuration consumed by scripts/plot_heatmap.py
+input_csv: ../publication_code/04.merge_plot/00.data_merge/df_saki_timeseries_feature.csv
+output_path: outputs/mimic_heatmap.png
+features:
+  - Temperature
+  - MBP
+  - DBP
+  - SBP
+  - pH
+  - Bicarbonate
+  - Base Excess
+  - Pco2
+  - Calcium
+  - Sodium
+  - Urine Output
+  - Creatinine
+  - Scr/bScr
+  - Potassium
+  - Bilirubin
+  - Respiratory Rate
+  - Heart Rate
+  - Aniongap
+  - Lactate
+  - WBC
+  - Glucose
+  - Fio2
+  - Po2
+  - Spo2
+  - Chloride
+  - Hemoglobin
+  - Hematocrit
+normalization: zscore
+normalize_by_dataset: true
+dataset_order: [mimic, aumcdb, eicu]
+time_values: [-2, -1, 1, 2, 3, 4, 5, 6, 7]
+group_labels:
+  "1": C1
+  "2": C2
+  "3": C3
+cmap: coolwarm

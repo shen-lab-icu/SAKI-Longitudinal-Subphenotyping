@@ -1,0 +1,31 @@
+[project]
+name = "sa-aki-pipeline"
+version = "0.1.0"
+description = "Modular codebase for the SA-AKI longitudinal subphenotype study"
+authors = [
+  { name = "SA-AKI Research Team" }
+]
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.1",
+  "numpy>=1.24",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+  "seaborn>=0.13",
+  "shap>=0.43",
+  "autogluon.tabular>=1.1.0",
+  "imbalanced-learn>=0.11",
+  "pyyaml>=6.0",
+  "miceforest>=5.7"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "black>=23.7",
+  "isort>=5.12"
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"

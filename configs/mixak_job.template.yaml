@@ -1,0 +1,31 @@
+# Example configuration for scripts/run_mixak_clustering.py
+# Longitudinal clustering via mixAK with model selection tracking
+
+input_csv: outputs/time_windows_24h.csv
+
+# Data columns
+id_column: stay_id
+time_column: time
+features:
+  - bun
+  - creatinine
+  - urineoutput
+  - crea_divide_basecrea
+
+# Clustering range
+k_min: 2
+k_max: 5
+
+# MCMC parameters (from original notebooks)
+burn: 50
+keep: 2000  # Reduce to 500 for K>=4 if memory constrained
+thin: 50
+info: 50
+
+# Model selection thresholds for Methods section
+autocorr_threshold: 0.1   # <10% chains with autocorrelation >0.1
+gelman_rubin_threshold: 1.1  # R-hat <1.1 for convergence
+
+# Output
+output_dir: outputs/mixak_phenotyping
+save_diagnostics: true

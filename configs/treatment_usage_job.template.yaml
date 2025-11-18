@@ -1,0 +1,21 @@
+# Example configuration for scripts/plot_treatment_usage.py
+output_dir: outputs/treatment_usage
+output_csv: outputs/treatment_usage_summary.csv
+
+# treatment_columns will be used for both aggregation and plotting order
+treatment_columns: [is_rrt, is_mv, is_vaso]
+
+# Optional plotting order hints
+# dataset_order: [mimic, aumcdb, eicu]
+# group_order: [1, 2, 3]
+
+datasets:
+  - name: mimic
+    treatment_csv: ../publication_code/00.data_mimic/treatment/mimic_lifesupport.csv
+    group_csv: ../publication_code/01.MIMICIV_SAKI_trajCluster/df_mixAK_fea4_C3.csv
+  - name: aumcdb
+    treatment_csv: ../publication_code/00.data_aumc/treatment/aumcdb_lifesupport.csv
+    group_csv: ../publication_code/02.AUMCdb_SAKI_trajCluster/df_mixAK_fea3_C3_aumc.csv
+  - name: eicu
+    treatment_csv: ../publication_code/00.data_eicu/treatment/eicu_lifesupport.csv
+    group_csv: ../publication_code/03.eICU_SAKI_trajCluster/df_mixAK_fea4_C3_eicu.csv

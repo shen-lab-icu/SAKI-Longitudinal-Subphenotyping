@@ -1,0 +1,21 @@
+# Example configuration for scripts/run_time_stats.py
+output_csv: outputs/time_stats.csv
+intervals:
+  - name: los_saki-sepsis
+    start_column: sepsis_onset
+    end_column: saki_onset
+    unit: hours
+
+datasets:
+  - name: mimic
+    events_csv: ../publication_code/01.MIMICIV_SAKI_trajCluster/sk_event_time.csv
+    group_csv: ../publication_code/01.MIMICIV_SAKI_trajCluster/df_mixAK_fea4_C3.csv
+    datetime_columns: [intime, outtime, sepsis_onset, saki_onset]
+  - name: aumcdb
+    events_csv: ../publication_code/02.AUMCdb_SAKI_trajCluster/aumcdb_sk_event_time.csv
+    group_csv: ../publication_code/02.AUMCdb_SAKI_trajCluster/df_mixAK_fea3_C3_aumc.csv
+    datetime_columns: [sepsis_onset, saki_onset]
+  - name: eicu
+    events_csv: ../publication_code/03.eICU_SAKI_trajCluster/eicu_saki_event_time.csv
+    group_csv: ../publication_code/03.eICU_SAKI_trajCluster/df_mixAK_fea4_C3_eicu.csv
+    datetime_columns: [sepsis_onset, saki_onset]
